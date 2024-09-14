@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="page4">
+        <h2>Documents</h2>
+        <p>We need more Information to Tailor the Agent <span class="highlight">Perfectly</span> to your needs.</p>
+        
+        <div class="form-container">
+            <div class="form-left">
+                <img src="./asset/images/document.png" alt="Document Icon" class="document-icon">
+            </div>
+    
+            <div class="form-right">
+                <form id="agent-form">
+                    <div id="step1">
+                        <div class="form-group">
+                            <label for="agentName">What do you want to <span class="highlight-blue">Name your Agent?</span></label>
+                            <input type="text" id="agentName" name="agentName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="agentTonality">Set Tonality of the Agent</label>
+                            <div class="select-wrapper">
+                                <select id="agentTonality" name="agentTonality" required>
+                                    <option value="" disabled selected>Select tonality</option>
+                                    <option value="0.1">Strict to Context</option>
+                                    <option value="0.7">Moderately Creative</option>
+                                    <option value="0.9">Highly Creative</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="personalizeAgent">Personalize Your Agent</label>
+                            <input type="text" id="personalizeAgent" name="personalizeAgent" required>
+                        </div>
+                        <button type="button" class="btn submit-btn" id="nextBtn">Next</button>
+                    </div>
+    
+                    <div id="step2" style="display: none;">
+                        <div class="form-group">
+                            <label for="specifyQuestions">Specify Questions or Instructions</label>
+                            <textarea id="specifyQuestions" name="specifyQuestions" rows="4"></textarea>
+                            <button type="button" class="btn add-question-btn" id="addQuestionBtn">+Add a Question</button>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="uploadContext">Please Upload Context File.</label>
+                            <input type="file" id="uploadContext" name="uploadContext">
+                        </div>
+                        <button type="submit" class="btn submit-btn">Upload Document</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

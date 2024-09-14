@@ -566,6 +566,35 @@ h2 {
 
 .submit-btn:hover {
   background-color: #6ba5e7;
+  
+}
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #203162;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+.add-question-btn {
+  background-color: #ffc610;
+  color: #203162;
+  border: none;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+input[type="file"] {
+  border: 1px solid #203162;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.error {
+  border-color: red;
 }
 
 footer {
@@ -629,7 +658,5 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-
-
-
+}
  

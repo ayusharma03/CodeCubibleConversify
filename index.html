@@ -108,12 +108,10 @@
             <div class="feature-image">
                 <img src="asset\images\friend.png" alt="Code editor illustration" class="computer">
                 </div>
-            </div>
         </section>
     </section>
     
     <section class="page4">
-        
         <h2>Documents</h2>
         <p>We need more Information to Tailor the Agent <span class="highlight">Perfectly</span> to your needs.</p>
         
@@ -121,33 +119,93 @@
             <div class="form-left">
                 <img src="./asset/images/document.png" alt="Document Icon" class="document-icon">
             </div>
-
+    
             <div class="form-right">
-                <div class="form-group">
-                    <label for="agentName">What do you want to <span class="highlight-blue">Name your Agent?</span></label>
-                    <input type="text" id="agentName" name="agentName">
-                </div>
-                
-                <div class="form-group">
-                    <label for="agentTonality">Set Tonality of the Agent</label>
-                    <div class="select-wrapper">
-                        <select id="agentTonality" name="agentTonality">
-                            <option value="" disabled selected default>Select tonality</option>
-                            <option value="" selected >Strict to Context</option>
-                            <option value="" selected >Moderately Creative</option>
-                            <option value="" selected >Highly Creative</option>
-                            
-                        </select>
+                <form id="agent-form">
+                    <div id="step1">
+                        <div class="form-group">
+                            <label for="agentName">What do you want to <span class="highlight-blue">Name your Agent?</span></label>
+                            <input type="text" id="agentName" name="agentName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="agentTonality">Set Tonality of the Agent</label>
+                            <div class="select-wrapper">
+                                <select id="agentTonality" name="agentTonality" required>
+                                    <option value="" disabled selected>Select tonality</option>
+                                    <option value="0.1">Strict to Context</option>
+                                    <option value="0.7">Moderately Creative</option>
+                                    <option value="0.9">Highly Creative</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="personalizeAgent">Personalize Your Agent</label>
+                            <input type="text" id="personalizeAgent" name="personalizeAgent" required>
+                        </div>
+                        <button type="button" class="btn submit-btn" id="nextBtn">Next</button>
                     </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="personalizeAgent">Personalize Your Agent</label>
-                    <input type="text" id="personalizeAgent" name="personalizeAgent">
-                </div>
-                <button type="submit" class="btn submit-btn">Next</button>
+    
+                    <div id="step2" style="display: none;">
+                        <div class="form-group">
+                            <label for="specifyQuestions">Specify Questions or Instructions</label>
+                            <textarea id="specifyQuestions" name="specifyQuestions" rows="4"></textarea>
+                            <button type="button" class="btn add-question-btn" id="addQuestionBtn">+Add a Question</button>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="uploadContext">Please Upload Context File.</label>
+                            <input type="file" id="uploadContext" name="uploadContext">
+                        </div>
+                        <button type="submit" class="btn submit-btn">Upload Document</button>
+                    </div>
+                </form>
             </div>
         </div>
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const form = document.getElementById('agent-form');
+                const step1 = document.getElementById('step1');
+                const step2 = document.getElementById('step2');
+                const nextBtn = document.getElementById('nextBtn');
+                const addQuestionBtn = document.getElementById('addQuestionBtn');
+    
+                nextBtn.addEventListener('click', function() {
+                    // Basic validation
+                    const requiredFields = step1.querySelectorAll('[required]');
+                    let isValid = true;
+                    requiredFields.forEach(field => {
+                        if (!field.value.trim()) {
+                            isValid = false;
+                            field.classList.add('error');
+                        } else {
+                            field.classList.remove('error');
+                        }
+                    });
+    
+                    if (isValid) {
+                        step1.style.display = 'none';
+                        step2.style.display = 'block';
+                    }
+                });
+    
+                addQuestionBtn.addEventListener('click', function() {
+                    const questionsArea = document.getElementById('specifyQuestions');
+                    questionsArea.value += questionsArea.value ? '\n' : '';
+                    questionsArea.value += '- ';
+                    questionsArea.focus();
+                });
+    
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // Here you would typically send the form data to a server
+                    console.log('Form submitted');
+                    // You can add code here to handle the form submission
+                });
+            });
+        </script>
     </section>
 
     <footer>
