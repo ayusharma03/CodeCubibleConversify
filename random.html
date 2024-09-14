@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Started Section</title>
+    <title>Introduction Section</title>
     <style>
         :root {
             --navy: #1e3a8a;
             --orange: #ffa500;
             --yellow: #ffd700;
-            --light-blue: #add8e6;
             --bg-color: #ffe4b5;
         }
 
@@ -20,17 +19,20 @@
             background-color: var(--bg-color);
         }
 
-        .get-started {
+        .page2 {
             max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
+            position: relative;
+        }
+
+        .intro {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
         }
 
         .content {
-            flex: 1;
             max-width: 60%;
         }
 
@@ -49,7 +51,8 @@
 
         .buttons {
             display: flex;
-            gap: 20px;
+            align-items: center;
+            margin-top: 30px;
         }
 
         .btn {
@@ -65,96 +68,46 @@
         .btn-primary {
             background-color: var(--orange);
             color: white;
+            margin-right: 20px;
         }
 
         .btn-secondary {
             background-color: var(--yellow);
             color: var(--navy);
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .image {
-            flex: 1;
-            max-width: 40%;
-            position: relative;
-        }
-
-        .circle {
-            width: 300px;
-            height: 300px;
-            background-color: var(--yellow);
-            border-radius: 50%;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .lego-pieces {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            height: 80%;
-            background-color: var(--light-blue);
-            border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            top: 40px;
+            right: 20px;
         }
 
-        .sparkle {
+        .blocks {
             position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: white;
-            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            right: 0;
+            bottom: 0;
+            width: 45%;
+            max-width: 500px;
         }
 
-        .sparkle:nth-child(1) {
-            top: 10%;
-            left: 10%;
-        }
-
-        .sparkle:nth-child(2) {
-            top: 20%;
-            right: 15%;
-        }
-
-        .leaf {
-            position: absolute;
-            bottom: 10px;
-            left: 10px;
-            width: 40px;
-            height: 40px;
-            background-color: #4CAF50;
-            clip-path: ellipse(50% 100% at 50% 50%);
-            transform: rotate(-45deg);
-        }
+        
     </style>
 </head>
 <body>
-    <section class="get-started">
-        <div class="content">
-            <h1>Introduction</h1>
-            <p>In today's world, businesses of all sizes need customer support solutions to stay competitive.</p>
-            <p>Build your own customer support agent for your brand today — no coding and no hassle.</p>
-            <div class="buttons">
-                <a href="#" class="btn btn-primary">Get Started →</a>
-                <a href="#" class="btn btn-secondary">How it works ?</a>
+    <section class="page2">
+        <section class="intro">
+            <div class="content">
+                <h1>Introduction</h1>
+                <p>In today's world, businesses of all sizes need customer support solutions to stay competitive.</p>
+                <p>Build your own customer support agent for your brand today — no coding and no hassle.</p>
+                
+                <div class="buttons">
+                    <a href="#" class="btn btn-primary">Get Started ➜</a>
+                </div>                
             </div>
-        </div>
-        <div class="image">
-            <div class="circle">
-                <div class="lego-pieces"></div>
-                <div class="sparkle"></div>
-                <div class="sparkle"></div>
-            </div>
-            <div class="leaf"></div>
-        </div>
+        </section>
+
+        <a href="#" class="btn btn-secondary">How it works ?</a>
+
+        <img src="./asset/images/blocks.png" alt="Lego blocks" class="blocks">
+        <div class="leaf"></div>
     </section>
 </body>
 </html>

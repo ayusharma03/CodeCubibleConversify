@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversify Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <section class="page1">
+
+    </section>
+</body>
+
+</html>
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversify Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Documents</h1>
+        <p>We need more Information to Tailor the Agent <span class="highlight">Perfectly</span> to your needs.</p>
+
+        <div class="form-group">
+            <label for="agent-name" class="blue-text" onclick="toggleInput('name-input')">What do you want to <span>Name your Agent?</span></label>
+            <input type="text" id="name-input" class="hidden" placeholder="Enter agent name">
+        </div>
+
+        <div class="form-group">
+            <label for="agent-tone" class="blue-text" onclick="toggleInput('tone-input')">Set Tonality of the Agent</label>
+            <input type="text" id="tone-input" class="hidden" placeholder="Enter agent tone">
+        </div>
+
+        <div class="form-group">
+            <label for="personalize-agent" class="blue-text" onclick="toggleInput('personalize-input')">Personalize Your Agent</label>
+            <input type="text" id="personalize-input" class="hidden" placeholder="Enter agent personalization">
+        </div>
+
+        <div class="form-group">
+            <label for="special-request">Any Special request for Us?</label>
+            <input type="text" id="special-request" placeholder="Enter special request">
+        </div>
+
+        <button type="submit" class="submit-btn">Submit</button>
+    </div>
+
+    <script>
+        function toggleInput(id) {
+            const inputField = document.getElementById(id);
+            inputField.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
