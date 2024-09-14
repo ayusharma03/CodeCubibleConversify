@@ -3,50 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Conversify</title>
-    <link rel="stylesheet" href="random.css">
+    <title>Get Started Section</title>
+    <style>
+        :root {
+            --navy: #1e3a8a;
+            --orange: #ffa500;
+            --yellow: #ffd700;
+            --light-blue: #add8e6;
+            --bg-color: #ffe4b5;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+        }
+
+        .get-started {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .content {
+            flex: 1;
+            max-width: 60%;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: var(--navy);
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--navy);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--orange);
+            color: white;
+        }
+
+        .btn-secondary {
+            background-color: var(--yellow);
+            color: var(--navy);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .image {
+            flex: 1;
+            max-width: 40%;
+            position: relative;
+        }
+
+        .circle {
+            width: 300px;
+            height: 300px;
+            background-color: var(--yellow);
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lego-pieces {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            background-color: var(--light-blue);
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+        }
+
+        .sparkle:nth-child(1) {
+            top: 10%;
+            left: 10%;
+        }
+
+        .sparkle:nth-child(2) {
+            top: 20%;
+            right: 15%;
+        }
+
+        .leaf {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            width: 40px;
+            height: 40px;
+            background-color: #4CAF50;
+            clip-path: ellipse(50% 100% at 50% 50%);
+            transform: rotate(-45deg);
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="/api/placeholder/40/40" alt="Conversify Logo" class="chatbot-icon">
-        </div>
-        <div class="decorative-icons">
-            <div class="icon yellow"></div>
-            <div class="icon green"></div>
-            <div class="icon blue"></div>
-        </div>
-    </header>
-    
-    <main>
-        <h1>WELCOME</h1>
-        <h2>To</h2>
-        <h1 class="brand">Conversify</h1>
-        
-        <section class="features">
-            <h2>Features</h2>
-            <div class="feature-cards">
-                <div class="card yellow">
-                    <h3>No Coding Required</h3>
-                    <p>We will handle that!</p>
-                </div>
-                <div class="card orange">
-                    <h3>Human like Interaction</h3>
-                    <p>Our New Best Friend</p>
-                </div>
-                <div class="card green">
-                    <h3>A.I.</h3>
-                    <p>Keeping up with technology</p>
-                </div>
+    <section class="get-started">
+        <div class="content">
+            <h1>Introduction</h1>
+            <p>In today's world, businesses of all sizes need customer support solutions to stay competitive.</p>
+            <p>Build your own customer support agent for your brand today — no coding and no hassle.</p>
+            <div class="buttons">
+                <a href="#" class="btn btn-primary">Get Started →</a>
+                <a href="#" class="btn btn-secondary">How it works ?</a>
             </div>
-        </section>
-    </main>
-    
-    <aside class="decorative-shapes">
-        <div class="shape blue"></div>
-        <div class="shape yellow"></div>
-        <div class="shape orange"></div>
-        <div class="shape green"></div>
-    </aside>
+        </div>
+        <div class="image">
+            <div class="circle">
+                <div class="lego-pieces"></div>
+                <div class="sparkle"></div>
+                <div class="sparkle"></div>
+            </div>
+            <div class="leaf"></div>
+        </div>
+    </section>
 </body>
 </html>
