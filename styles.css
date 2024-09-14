@@ -456,8 +456,113 @@ h2 {
   margin-left: 10px;
 }
 
+.page4 {
+  background-color: #fdf6e3;
+  padding: 40px 20px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.page4 h2 {
+  color: #203162;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.page4 p {
+  color: #203162;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.highlight {
+  color: #ff9839;
+}
+
+.highlight-blue {
+  color: #86c2f8;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.form-left {
+  flex: 1;
+  max-width: 30%;
+}
+
+.document-icon {
+  width: 100%;
+  max-width: 200px;
+}
+
+.form-right {
+  flex: 2;
+  max-width: 60%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #203162;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #203162;
+  background-color: transparent;
+  color: #203162;
+  font-size: 1rem;
+}
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper::after {
+  content: '▼';
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #203162;
+}
+
+.submit-btn {
+  background-color: #86c2f8;
+  color: #203162;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #6ba5e7;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
+  
   .feature,
   .feature.no-code {
     flex-direction: column;
@@ -495,16 +600,23 @@ h2 {
   .user-icon {
     margin: 0 5px;
   }
+  .form-container {
+    flex-direction: column;
 }
 
-/* footer {
-  text-align: center;
-  margin-top: 40px;
-} */
+.form-left,
+.form-right {
+    max-width: 100%;
+}
 
-/* @media (max-width: 768px) {
-  .feature-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-} */
+.document-icon {
+    margin-bottom: 20px;
+}
+.feature-cards {
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+ 
