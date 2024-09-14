@@ -548,7 +548,12 @@ h2 {
   font-weight: bold;
   border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: 0.3s ease;
+
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .submit-btn:hover {
@@ -616,7 +621,3 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-
-
-
- 
