@@ -107,21 +107,21 @@
             </div>
             <div class="feature-image">
                 <img src="asset\images\friend.png" alt="Code editor illustration" class="computer">
-                <div class="question-marks">
-                    <img src="asset\images\question.png" alt="question" class="question">
                 </div>
             </div>
         </section>
     </section>
     
     <section class="page4">
+        
         <h2>Documents</h2>
         <p>We need more Information to Tailor the Agent <span class="highlight">Perfectly</span> to your needs.</p>
         
         <div class="form-container">
             <div class="form-left">
-                <img src="./asset/images/document-icon.png" alt="Document Icon" class="document-icon">
+                <img src="./asset/images/document.png" alt="Document Icon" class="document-icon">
             </div>
+
             <div class="form-right">
                 <div class="form-group">
                     <label for="agentName">What do you want to <span class="highlight-blue">Name your Agent?</span></label>
@@ -132,8 +132,11 @@
                     <label for="agentTonality">Set Tonality of the Agent</label>
                     <div class="select-wrapper">
                         <select id="agentTonality" name="agentTonality">
-                            <option value="" disabled selected>Select tonality</option>
-                            <!-- Add more options here -->
+                            <option value="" disabled selected default>Select tonality</option>
+                            <option value="" selected >Strict to Context</option>
+                            <option value="" selected >Moderately Creative</option>
+                            <option value="" selected >Highly Creative</option>
+                            
                         </select>
                     </div>
                 </div>
@@ -142,7 +145,6 @@
                     <label for="personalizeAgent">Personalize Your Agent</label>
                     <input type="text" id="personalizeAgent" name="personalizeAgent">
                 </div>
-                
                 <button type="submit" class="btn submit-btn">Next</button>
             </div>
         </div>
